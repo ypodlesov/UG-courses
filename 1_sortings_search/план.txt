@@ -1,0 +1,33 @@
+
+
+План:
+СОРТИРОВКИ: сказать что есть quicksort, mergesort, heapsort, insertion sort
+и про временную сложность, подитожить всё это библиотечным сортом
+"sort(a.begin(), a.end(), cmp)", немного рассказать про cmp.
+ПОИСК: рассказать про линейный поиск, бинарный поиск
+
+ЗАДАЧИ:
+1. "Задача о ресторане"
+2. "Составление расписания"
+3. "Работы и сроки выполнения"
+4. "Задания для машин"
+5. Задачи с informatics:
+
+https://informatics.msk.ru/mod/statements/view.php?chapterid=1#1 разобрать (задача M) 
+https://informatics.msk.ru/mod/statements/view.php?chapterid=2#1 разобрать (задача O)
+Муницип 2010 https://informatics.msk.ru/mod/statements/view.php?chapterid=2969#1 есть
+Регион 2009 2 день https://informatics.msk.ru/mod/statements/view.php?chapterid=1209#1 разобрать (задача L)
+https://informatics.msk.ru/mod/statements/view.php?chapterid=1664#1 разобрать (задача K)
+Регион 2010 1 день  https://informatics.msk.ru/mod/statements/view.php?chapterid=1923#1 разобрать (задача J)
+Регион 2012 2 день задача C https://informatics.msk.ru/mod/statements/view.php?chapterid=3870#1
+Регион 2015 2 день задача B https://informatics.msk.ru/mod/statements/view.php?chapterid=112749#1
+Регион 2016 1 день задача B https://informatics.msk.ru/mod/statements/view.php?chapterid=113097#1
+Открытая олимпиада школьников, 2008, задача C https://informatics.msk.ru/mod/statements/view.php?chapterid=1387#1
+Открытая олимпиада школьников, 2003, задача E https://informatics.msk.ru/mod/statements/view.php?chapterid=1016#1
+Открытая олимпиада школьников, 2004, Задача E https://informatics.msk.ru/mod/statements/view.php?chapterid=1027#1
+Открытая олимпиада школьников, 2004, Задача G https://informatics.msk.ru/mod/statements/view.php?chapterid=1029#1
+Открытая олимпиада школьников, 2005, Задача K https://informatics.msk.ru/mod/statements/view.php?chapterid=1045#1
+Открытая олимпиада школьников, 2007, Задача C https://informatics.msk.ru/mod/statements/view.php?chapterid=1099#1
+МОШ, 2007, 1 день, Задача A https://informatics.msk.ru/mod/statements/view.php?chapterid=490#1  разобрать (задача A)
+МОШ, 2007, 2 день, Задача D https://informatics.msk.ru/mod/statements/view.php?chapterid=497#1 есть
+МОШ, 2008, 2 день, Задача D https://informatics.msk.ru/mod/statements/view.php?chapterid=715#1 есть
