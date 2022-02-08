@@ -24,10 +24,10 @@ int main() {
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; ++j)
                 if (d[i][k] < INT_MAX && d[k][j] < INT_MAX) d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
-    int ans = INT_MIN;
+    int ans = INT_MAX;
     for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++) ans = max(ans, d[i][j]);
-        
+        for (int j = 0; j < n; j++) ans = min(ans, d[i][j]);
+
     cout << ans;
 
     return 0;
