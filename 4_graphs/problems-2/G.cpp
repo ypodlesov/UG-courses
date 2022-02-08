@@ -17,7 +17,6 @@ int main() {
     int n, b, e;
     cin >> n >> b >> e;
     b--, e--;
-    vector<vector<int>> a(n, vector<int>(n));
     vector<vector<int>> d(n, vector<int>(n, pow(10, 9)));
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
