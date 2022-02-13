@@ -3,16 +3,18 @@ using namespace std;
 
 #define ll long long
 #define INF 1000000000
+#define mod 1000000007
+#define PB push_back
 #define f first
 #define s second
-#define PB push_back
 
-
-const int N = 105;
-vector<vector<int>> g(N), comps, cond(N);
+const int N = 200005;
+ll cnt = 1;
+vector<vector<int>> g(N), cond(N);
+vector<vector<int>> comps;
 vector<pair<int,int>> bridges;
-vector<bool> used(105);
-vector<int> up(N), tin(N), buffer, type(N);
+vector<bool> used(N);
+vector<int> up(N), tin(N), buffer, type(N), leaves, comp_cnt(N);
 int timer;
 
 void dfs(int v, int p = -1) {
@@ -43,10 +45,7 @@ void dfs(int v, int p = -1) {
 int main() {
 
     int n, m, x, y;
-    cout << "Input number of vertexes: ";
-    cin >> n;
-    cout << "Input number of edges: ";
-    cin >> m;
+    cin >> n >> m;
     for (int i = 1; i <= m; ++i) {
         cin >> x >> y;
         g[x].PB(y), g[y].PB(x);
@@ -57,40 +56,13 @@ int main() {
             dfs(i);
         }
     }
-    cout << "Bridges:\n";
-    for (auto i : bridges)
-        if (i.f != -1) cout << i.f << ' ' << i.s << endl;
-    cout << "Components:\n";
-    for (int i = 0; i < comps.size(); ++i) {
-        cout << i + 1 << ": ";
-        for (auto j : comps[i]) cout << j << ' ';
-        cout << endl;
-    }
-
-    cout << "Condence:\n";
     for (auto i : bridges) cond[type[i.f]].PB(type[i.s]), cond[type[i.s]].PB(type[i.f]);
-
-    // for (int i = 1; i <= n; ++i) cout << i << ": " << type[i] << endl;
-    for (int i = 1; i <= comps.size(); ++i) {
-        cout << i << ": ";
-        for (auto j : cond[i]) cout << j << ' ';
-        cout << endl;
-    }
-
-// 10 13
-// 1 2
-// 1 6
-// 2 3
-// 3 4
-// 4 5
-// 6 7
-// 7 8
-// 8 9
-// 7 9
-// 9 10
-// 8 10
-// 3 5
-// 2 6
+    for (int i = 1; i <= n; ++i) ++comp_cnt[type[i]];
+    for (int i = 1; i <= comps.size(); ++i)
+        if (cond[i].size() == 1) leaves.PB(i);
+    for (auto l : leaves) cnt = cnt * comp_cnt[l] % mod;
+    if (leaves.size() == 0) cout << 1 << ' ' << comp_cnt[1] << endl;
+    else cout << leaves.size() << ' ' << cnt << endl;
 
     return 0;
 }
