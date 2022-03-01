@@ -6,18 +6,19 @@ using namespace std;
 #define PB push_back
 #define f first
 #define s second
+const int N = 105;
 
 int n, m, s, t, ans;
-vector<vector<int>> c(105, vector<int>(105)), f(105, vector<int>(105));
-vector<bool> used(105);
+vector<vector<int>> c(N, vector<int>(N)), f(N, vector<int>(N));
+vector<bool> used;
 
 int dfs(int v, int delta) {
     if (v == t) return delta;
     used[v] = true;
     for (int u = 1; u <= n; ++u) {
-        if (f[v][u] >= c[v][u] || used[u]) continue;
+        if (f[v][u] == c[v][u] || used[u]) continue;
         int tmp = dfs(u, min(delta, c[v][u] - f[v][u]));
-        if (tmp > 0) {
+        if (tmp) {
             f[v][u] += tmp;
             f[u][v] -= tmp;
             return tmp;
@@ -37,8 +38,8 @@ int main() {
     while (true) {
         used.assign(n+1, false);
         int delta = dfs(s, INF);
-        if (delta > 0) ans += delta;
-        else break;
+        if (!delta) break;
+        ans += delta;
     }
     cout << ans << endl;
 
