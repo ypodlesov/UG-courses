@@ -37,10 +37,10 @@ node *build(int left, int right, vector<int> &a) {
 int query(int left, int right, node *root) {
     if (left > root->right || right < root->left) return 0;
     if (left <= root->left && right >= root->right) return root->sum + root->add * (root->right - root->left + 1);
-    int tmp = query(left, right, root->child_left) + query(left, right, root->child_right);
+    ll tmp = query(left, right, root->child_left) + query(left, right, root->child_right);
     if (root->left <= left && root->right >= right) return tmp + root->add * (right - left + 1);
-    if (root->left <= right) return tmp + root->add * (right - root->left + 1);
-    if (root->right >= left) return tmp + root->add * (root->right - left + 1);
+    if (root->right <= right) return tmp + root->add * (root->right - left + 1);
+    if (root->left >= left) return tmp + root->add * (right - root->left + 1);
     return 0;
 }
 
