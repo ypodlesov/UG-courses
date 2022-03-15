@@ -92,6 +92,10 @@ node * merge(node *root1, node *root2) {
     }
 }
 
+node *merge(node *root1, node *root2, node *root3) {
+    return merge(merge(root1, root2), root3);
+}
+
 int get_kth(node *root, int k) {
     int left_size = get_size(root->left);
     if (k < left_size) return get_kth(root->left, k);
@@ -99,21 +103,40 @@ int get_kth(node *root, int k) {
     else return get_kth(root->right, k - left_size - 1);
 }
 
+int query(int l, int r, node *root) {
+    auto [res1, tmp] = split_kth(root, l);
+    auto [res2, res3] = split_kth(tmp, r - l + 1);
+    int ans = res2->max + res2->add;
+    root = merge(res1, res2, res3);
+    return ans;
+}
+
+void update_kth(node *root, int k, int x) {
+    int left_size = get_size(root->left);
+    if (k < left_size) update_kth(root->left, k, x);
+    else if (k == left_size) root->add += x;
+    else update_kth(root->right, k - left_size - 1, x);
+}
+
+
+
 int main() {
 
     node *root = nullptr;
     int size = 100000;
-    for (int i = 0; i < size; ++i) {
-        node *newnode = new node((ll)i * i % 1000000);
+    for (int i = 1; i < size; ++i) {
+        node *newnode = new node(i);
         root = merge(root, newnode);
     }
-    cout << root->max << endl;
-    auto [tmp, root2] = split_kth(root, 51000);
-    auto [root0, root1] = split_kth(tmp, 49000);
-    cout << get_max(root1) << endl;
-    root1->add += 780;
-    root = merge(merge(root0, root1), root2);
-    cout << get_max(root) << endl;
+
+    // cout << get_kth(root, 0) << endl;
+    // cout << root->max << endl;
+    // auto [tmp, root2] = split_kth(root, 51000);
+    // auto [root0, root1] = split_kth(tmp, 49000);
+    // cout << get_max(root1) << endl;
+    // root1->add += 780;
+    // root = merge(merge(root0, root1), root2);
+    // cout << get_max(root) << endl;
 
     return 0;
 }
