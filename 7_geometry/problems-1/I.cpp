@@ -150,7 +150,11 @@ int point_side(Point p, LD a, LD b, LD c) {
 
 int main() {
 
-
+    Point p1, p2;
+    LD a, b, c;
+    cin >> p1 >> p2 >> a >> b >> c;
+    if (point_side(p1, a, b, c) * point_side(p2, a, b, c) > 0) cout << "YES\n";
+    else cout << "NO\n";
 
     return 0;
 }

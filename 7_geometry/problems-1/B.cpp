@@ -4,7 +4,6 @@ using namespace std;
 #define LL long long
 #define LD long double
 #define INF 1000000000
-#define EPS 0.000000001
 #define PB push_back
 #define PF push_front
 #define FF first
@@ -91,11 +90,11 @@ Vector operator / (double k, const Vector & a) {
     return Vector(a.x / k, a.y / k);
 }
 
-LD dot_product(const Vector &a, const Vector &b) { // scalar product
+LD dot_product(Vector &a, Vector &b) { // scalar product
     return a.x * b.x + a.y * b.y;
 }
 
-LD cross_product(const Vector &a, const Vector &b) { // cross product
+LD cross_product(Vector &a, Vector &b) { // cross product
     return a.x * b.y - a.y * b.x;
 }
 
@@ -131,26 +130,16 @@ LD dist_to_segment(Point P, Point A, Point B) { // dist from point P to segment 
     else return min(AP.length(), BP.length());
 }
 
-LD angle(const Vector &a, const Vector &b) { // angle between the vectors
+LD angle(Vector a, Vector b) { // angle between the vectors
     return atan2(cross_product(a, b), dot_product(a, b));
-}
-
-pair<Point, Point> points_on_line_eq(LD a, LD b, LD c) {
-    Point A(-a * c / (a*a + b*b), -b * c / (a*a + b*b));
-    Point B(-b + A.x, a + A.y);
-    return {A, B};
-}
-
-int point_side(Point p, LD a, LD b, LD c) {
-    LD tmp = a * p.x + b * p.y + c;
-    if (tmp > 0) return 1;
-    else if (tmp == 0) return 0;
-    return -1;
 }
 
 int main() {
 
-
+    Point a, b, c;
+    cin >> a >> b >> c;
+    cout.precision(20);
+    cout << triangle_area(a, b, c) << endl;
 
     return 0;
 }

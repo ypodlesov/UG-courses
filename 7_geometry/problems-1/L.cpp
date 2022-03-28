@@ -150,6 +150,10 @@ int point_side(Point p, LD a, LD b, LD c) {
 
 int main() {
 
+    cout.precision(20);
+    Point a, b, p;
+    cin >> p >> a >> b;
+    cout << dist_to_segment(p, a, b) << endl;
 
 
     return 0;

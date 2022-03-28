@@ -141,15 +141,14 @@ pair<Point, Point> points_on_line_eq(LD a, LD b, LD c) {
     return {A, B};
 }
 
-int point_side(Point p, LD a, LD b, LD c) {
-    LD tmp = a * p.x + b * p.y + c;
-    if (tmp > 0) return 1;
-    else if (tmp == 0) return 0;
-    return -1;
-}
-
 int main() {
 
+    Point P;
+    LD a, b, c;
+    cin >> P >> a >> b >> c;
+    auto [A, B] = points_on_line_eq(a, b, c);
+    cout.precision(20);
+    cout << dist_to_line(P, A, B) << endl;
 
 
     return 0;

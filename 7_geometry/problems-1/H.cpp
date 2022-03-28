@@ -141,16 +141,12 @@ pair<Point, Point> points_on_line_eq(LD a, LD b, LD c) {
     return {A, B};
 }
 
-int point_side(Point p, LD a, LD b, LD c) {
-    LD tmp = a * p.x + b * p.y + c;
-    if (tmp > 0) return 1;
-    else if (tmp == 0) return 0;
-    return -1;
-}
-
 int main() {
 
-
+    Point p, a, b;
+    cin >> p >> a >> b;
+    if (dist_to_ray(p, a, b) < EPS) cout << "YES\n";
+    else cout << "NO\n";
 
     return 0;
 }
