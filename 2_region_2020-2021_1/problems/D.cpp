@@ -3,7 +3,6 @@ using namespace std;
 
 #define ll long long
 #define INF 1000000000
-// #define mod 385001
 #define mod 100003
 #define PB push_back
 #define f first
@@ -11,7 +10,6 @@ using namespace std;
 
 bool flag;
 int n, m, slen, last_d = -1;
-// pair<int,int> l_dist = {0, 0}, r_dist{INF+5, INF+5};
 int l_dist[2] = {-10, -10}, r_dist[2] = {INF+5, INF+5};
 set<int> d_potential;
 vector<set<int>> ans(mod);
