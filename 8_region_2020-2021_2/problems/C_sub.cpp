@@ -93,7 +93,7 @@ int main() {
             int old = a[x][y];
             a[x][y] = tmp;
             int delta = update(a, x, y, old);
-            if (exp(double(-delta) / t)) cur += delta;
+            if (exp(double(-delta) / t) > rnd()) cur += delta;
             else a[x][y] = old;
         }
         if (cur == 0) break;
