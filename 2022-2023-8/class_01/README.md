@@ -47,7 +47,7 @@
 
 Например при вводе в терминал `man man` (всё до символа % включительно является приглашением терминала к вводу команд, это приглашение может выглядеть иначе на Вашем компьютере)
 ```console
-    Me@MyMac class_01 % man man
+yegorpodlesov@MyMac class_01 % man man
 ```
 
 После нажатия **Enter** нас перекидывает на страницу мануала, где мы можем видеть то же содержание, что и по [ссылке](http://www.opennet.ru/man.shtml?category=1&russian=0&topic=man).
@@ -99,7 +99,7 @@ Target: x86_64-apple-darwin21.6.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 ```
-или 
+или такой 
 ```console
 gcc (Debian 8.3.0-6) 8.3.0
 Copyright (C) 2018 Free Software Foundation, Inc.
