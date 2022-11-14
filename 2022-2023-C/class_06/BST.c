@@ -41,6 +41,12 @@ insert(Node *root, int key)
     }
 }
 
+Node *
+delete(Node *root, int key) 
+{
+    
+}
+
 void 
 show(Node *root) 
 {
