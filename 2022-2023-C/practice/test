@@ -1,6 +1,0 @@
-#! /bin/bash
-
-gcc test_unique.c -o test_unique
-./test_unique $1 < $2 > $3
-diff $3 $4 
-
