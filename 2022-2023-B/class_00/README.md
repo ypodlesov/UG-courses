@@ -17,11 +17,11 @@
 Рассмотрим в качестве примера одну из классических задач - задачу
 **сортировки**. Дадим ей формальное определение:
 
-**Вход:** Последовательность из $n$ чисел $ \langle a_1, a_2, \ldots,
-a_n\rangle $.
+**Вход:** Последовательность из $n$ чисел $\langle a_1, a_2, \ldots,
+a_n \rangle$.
 
-**Выход:** Перестановка $ \langle a_1', a_2', \ldots a_n'\rangle$ входной
-последовательности, такая, что $a_1' \le a_2' \le \ldots \le a_n'$
+**Выход:** Перестановка $\langle a_1', a_2', \ldots a_n'\rangle$ входной
+последовательности, такая, что $a_1' \le a_2' \le \ldots \le a_n'$.
 
 Задачу сортировки можно решать многими алгоритмами, приведём для примера один из самых
 простых - **сортировку вставками** (**insertion sort**). 
@@ -41,12 +41,14 @@ for j = 2 to A.length
 Пусть задана последовательность $\langle 5, 2, 4, 6, 1, 3\rangle$. Тогда после
 каждого прохода цикла `for` будем иметь:
 
-$$j = 2, \: A = \langle \textcolor{green}{5}, 2, 4, 6, 1, 3 \rangle \xrightarrow{1}
+$$ 
+j = 2, \: A = \langle \textcolor{green}{5}, 2, 4, 6, 1, 3 \rangle \xrightarrow{1}
 j = 3, \: A = \langle \textcolor{green}{2}, \textcolor{green}{5}, 4, 6, 1, 3 \rangle \xrightarrow{2} 
 j = 4, \: A = \langle \textcolor{green}{2}, \textcolor{green}{4}, \textcolor{green}{5}, 6, 1, 3 \rangle \xrightarrow{3} \newline \xrightarrow{3}
 j = 5, \: A = \langle \textcolor{green}{2}, \textcolor{green}{4}, \textcolor{green}{5}, \textcolor{green}{6}, 1, 3 \rangle \xrightarrow{4} 
 j = 6, \: A = \langle \textcolor{green}{1}, \textcolor{green}{2}, \textcolor{green}{4}, \textcolor{green}{5}, \textcolor{green}{6}, 3 \rangle \xrightarrow{5} 
-j = 7, \: A = \langle \textcolor{green}{1}, \textcolor{green}{2}, \textcolor{green}{3}, \textcolor{green}{4}, \textcolor{green}{5}, \textcolor{green}{6} \rangle$$
+j = 7, \: A = \langle \textcolor{green}{1}, \textcolor{green}{2}, \textcolor{green}{3}, \textcolor{green}{4}, \textcolor{green}{5}, \textcolor{green}{6} \rangle
+$$
 
 ## Корректность алгоритма
 
