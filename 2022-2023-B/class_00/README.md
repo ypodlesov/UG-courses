@@ -108,7 +108,7 @@ $$
 | `for j = 2 to A.length` | $n$ |
 | `key = A[j]` | $n - 1$ |
 | `i = j - 1` | $n - 1$ |
-| `while i > 0 and A[i] > key` | $\sum_{j=2}^{n}t_j$ |
+| `while i > 0 and A[i] > key` | $\sum_{j=2}^{n}t_j$ $\sum\limits_{j=2}^n t_j$ |
 | `A[i+1] = A[i]` | $\sum_{j=2}^n(t_j - 1)$ |
 | `i = i - 1` | $\sum_{j=2}^n(t_j - 1)$ |
 | `A[i+1] = key` | $n - 1$ |
