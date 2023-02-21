@@ -1,9 +1,0 @@
-Informatics:
-
-1) Москва муницип с 2007: https://informatics.msk.ru/course/view.php?id=13#section-2
-2) Заключительный этап с 2004 года: https://informatics.msk.ru/course/view.php?id=4
-3) Региональный этап с 2009 года: https://informatics.msk.ru/course/view.php?id=46
-4) Открытая олимпиада школьников по программированию: https://informatics.msk.ru/course/view.php?id=39
-
-
-5) Высшая проба задания с 2012 года: https://olymp.hse.ru/mmo/materials-it
