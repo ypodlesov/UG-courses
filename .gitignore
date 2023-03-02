@@ -1,11 +1,12 @@
 
-*DS_Store
+*.DS_Store
 *.numbers
 *.py
 *.png
 *.jpg
 22-23-B
-vscode
+.vscode
+.gitignore
 
 # Created by https://www.toptal.com/developers/gitignore/api/c
 # Edit at https://www.toptal.com/developers/gitignore?templates=c
